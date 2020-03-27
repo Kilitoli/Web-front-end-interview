@@ -1,0 +1,85 @@
+1、jquery中$.bind() $.on $.live的区别
+.bind()是直接绑定在元素上
+.live()则是通过冒泡的方式来绑定到元素上的。更适合列表类型的，绑定到document DOM节点上。
+和.bind()的优势是支持动态的数据
+.on()则是最新的1.7版本整合了之前的三种方式的新事件绑定机制
+
+2、jquery中callback的作用
+js代码会至上而下一条线执行下去，但是有时候我们需要等到一个操作结束之后再进行下一个操作，这时候就需要用到回调函数
+
+3、display:none和visibility:hidden的区别
+dispaly:none 设置该属性后，该元素下的元素都会隐藏，占据的空间消失。
+visibility:hidden 设置该元素后，元素虽然不可见了，但是依然占据空间的位置。
+
+4、清除浮动的方法
+给父级也加浮动
+给父级加display:inline-block;
+在浮动元素下加<br clear="all">
+给浮动元素父级加{zoom:1;}
+给浮动元素父级加overflow:hidden;
+
+5、块级元素垂直居中的方法
+父元素position:relative，子元素position:absolute;top:50%;left:50%;margin-top:-height/2;margin-left:-width/2;
+父元素样式属性display:flex;子元素使用margin:auto。这种方式在子块级元素宽高不确定的时候（宽高会自适应为其里面内容的宽高）依然可以使用。
+已知子元素的宽和高，设置其样式属性position:absolute;top:0;left:0;bottom:0;right:0;margin:auto;
+
+6、请说出三种减少页面加载时间的方法
+减少http请求（合并文件，合并图片）。
+css样式的定义放置在文件头部
+Javascript脚本放在文件末尾
+压缩合并Javascript、CSS代码
+
+7、使用过哪些前端框架，请浅谈他们的优点和缺点
+Vue
+React
+Angular
+QucikUI
+Layui
+Avalon
+Dojo
+Ember
+Aurelia
+
+8、前端存储值你知道的有几种方式
+本地存储localstorage
+本地存储sessionstorage
+离线缓存（application cache）
+Web SQL
+IndexedDB
+https://www.cnblogs.com/LuckyWinty/p/5699117.html
+
+9、html上传或文件，你有几种方法方式，请大体描述
+(1) 传统方式
+<form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data" >
+　　　<input type="file" id="upload" name="upload" /> <br />
+　　　<input type="submit" value="Upload" />
+</form>
+基本上传控件
+
+(2)iframe上传
+
+(3)初步使用FormData(ajax上传)
+
+(4)图片预览
+
+(5)拖拽上传
+
+(6)在rails中获取上传
+
+(7)XMLHttpRequest新版本
+
+https://www.jianshu.com/p/7636d5c60a8d
+
+10、jquery将变量对象转换为json字符串的方法
+var obj = str.parseJSON(); //由JSON字符串转换为JSON对象
+JSON.stringify(jsonobj); //可以将json对象转换成字符串
+
+11、关于Base64、说说你的了解
+HTTP将BASE64-编码用于基本认证和摘要认证，在几种HTTP扩展中也使用了该编码。
+Base-64编码保证了二进制数据的安全
+Base-64编码将一个8位子节序列拆散为6位的片段，并为每个6位的片短分配一个字符，这个字符是Base-64字母表中的64个字符之一。
+
+12、项目团队开发过程中，你们使用过什么管理工具
+svn git
+
+13、绘制淘宝或天猫首页的H5页面，不包括接口对接和后端数据，只需要纯静态效果，你大概多久可以完成html页面
